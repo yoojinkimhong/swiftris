@@ -21,6 +21,7 @@
 		1951087E1C6C0D8500C60BD5 /* levelup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 195108791C6C0D8500C60BD5 /* levelup.mp3 */; settings = {ASSET_TAGS = (); }; };
 		1951087F1C6C0D8500C60BD5 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1951087A1C6C0D8500C60BD5 /* theme.mp3 */; settings = {ASSET_TAGS = (); }; };
 		195108811C6C14CD00C60BD5 /* Array2D.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195108801C6C14CD00C60BD5 /* Array2D.swift */; settings = {ASSET_TAGS = (); }; };
+		19AC95EB1C83C6FB00759F39 /* Block.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AC95EA1C83C6FB00759F39 /* Block.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		195108791C6C0D8500C60BD5 /* levelup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = levelup.mp3; sourceTree = "<group>"; };
 		1951087A1C6C0D8500C60BD5 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
 		195108801C6C14CD00C60BD5 /* Array2D.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Array2D.swift; sourceTree = "<group>"; };
+		19AC95EA1C83C6FB00759F39 /* Block.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Block.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				195108431C6C0AE100C60BD5 /* AppDelegate.swift */,
 				195108471C6C0AE100C60BD5 /* GameScene.swift */,
+				19AC95EA1C83C6FB00759F39 /* Block.swift */,
 				195108801C6C14CD00C60BD5 /* Array2D.swift */,
 				195108491C6C0AE100C60BD5 /* GameViewController.swift */,
 				1951084B1C6C0AE100C60BD5 /* Main.storyboard */,
@@ -294,6 +297,7 @@
 			files = (
 				195108481C6C0AE100C60BD5 /* GameScene.swift in Sources */,
 				195108811C6C14CD00C60BD5 /* Array2D.swift in Sources */,
+				19AC95EB1C83C6FB00759F39 /* Block.swift in Sources */,
 				1951084A1C6C0AE100C60BD5 /* GameViewController.swift in Sources */,
 				195108441C6C0AE100C60BD5 /* AppDelegate.swift in Sources */,
 			);
@@ -522,6 +526,7 @@
 				1951086E1C6C0AE100C60BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1951086F1C6C0AE100C60BD5 /* Build configuration list for PBXNativeTarget "com.yoojinkimhong.swiftrisTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +535,7 @@
 				195108711C6C0AE100C60BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		195108721C6C0AE100C60BD5 /* Build configuration list for PBXNativeTarget "com.yoojinkimhong.swiftrisUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +544,7 @@
 				195108741C6C0AE100C60BD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

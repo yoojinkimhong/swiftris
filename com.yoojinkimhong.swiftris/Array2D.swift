@@ -25,7 +25,7 @@
     //#4
         subscript(column: Int, row:Int) -> T? {
             get {
-                return array[(row * columns) + columns]
+                return array[(row * columns) + column]
             }
             set(newValue) {
                 array[(row * columns) + columns] = newValue
@@ -33,3 +33,6 @@
         }
     
 }
+
+
+
