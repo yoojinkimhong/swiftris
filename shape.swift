@@ -113,6 +113,83 @@ class Shape: Hashable, CustomStringConvertible {
             return Block(column: column + diff.columnDiff, row: row + diff.rowDiff, color: color)
         }
     }
+    final func rotateBlocks(orientation: Orientation) {
+        guard let blockRowColumnTranslation:Array<(columnDiff: Int, rowDiff: Int)> = blockRowColumnPositions[orientation] else {
+            return
+        }
+        for (idx, diff) in blockRowColumnTranslation.enumerate() {
+            blocks[idx].column = column + diff.columnDiff
+            blocks[idx].row = row + diff.rowDiff
+        }
+    }
+    
+    //#3
+    final func rotateClockwise() {
+        let newOrientation = Orientation.rotate(orientation, clockwise: true)
+        rotateBlocks(newOrientation)
+        orientation = newOrientation
+    }
+    
+    final func rotateCounterClockwise() {
+        let newOrientation = Orientation.rotate(orientation, clockwise: false)
+        rotateBlocks(newOrientation)
+        orientation = newOrientation
+    }
+    
+    final func lowerShapeByOneRow() {
+        shiftBy(0, rows:1)
+    }
+    
+    final func raiseShapeByOneRow() {
+        shiftBy(0, rows:-1)
+    }
+    
+    final func shiftRightByOneColumn() {
+        shiftBy(1, rows: 0)
+    }
+    
+    final func shiftLeftByOneColumn() {
+        shiftBy(-1, rows:0)
+    }
+    
+    // #2
+    final func shiftBy(columns: Int, rows: Int) {
+        self.column += columns
+        self.row += rows
+        for block in blocks {
+            block.column += columns
+            block.row += rows
+        }
+    }
+    
+    // #3
+    final func moveTo(column: Int, row: Int) {
+        self.column = column
+        self.row = row
+        rotateBlocks(orientation)
+    }
+    
+    final class func random(startingColumn:Int, startingRow:Int) -> Shape {
+        switch Int(arc4random_uniform(NumShapeTypes)) {
+            
+            //#4
+        case 0:
+            return SquareShape(column: startingColumn, row: startingRow)
+        case 1:
+            return LineShape(column: startingColumn, row: startingRow)
+        case 2:
+            return TShape(column: startingColumn, row: startingRow)
+        case 3:
+            return LShape(column: startingColumn, row: startingRow)
+        case 4:
+            return JShape(column: startingColumn, row: startingRow)
+        case 5:
+            return SShape(column: startingColumn, row: startingRow)
+        default:
+            return ZShape(column: startingColumn, row: startingRow)
+        }
+    }
+    
 }
 
 func ==(lhs: Shape, rhs: Shape) -> Bool {
